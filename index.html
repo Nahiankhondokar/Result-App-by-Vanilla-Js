@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Result App</title>
+	<!-- ALL CSS FILES  -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+
+	<section class="result-area">
+		<div class="container">
+			<form class="result-form" action="">
+				<div class="result-add">
+			
+					<h2>Students Result Add Form</h2>
+					<hr>
+					<div id="msg"></div>
+					<!-- Form Top Part -->
+					<div class="result-add-form-top">
+						
+						<div class="form-inputs">
+							<label for=""> Name</label> <span id="name">:</span> 
+							<input placeholder="Name" name="name" type="text">
+						</div>
+						
+
+						<div class="form-inputs">
+							<label for=""> Institute</label> <span>:</span> 
+							<input placeholder="Institute" name="institute" type="text">
+						</div>
+						
+					</div>
+
+					<!-- Form Middle Part -->
+					<div class="result-add-form-middle">
+						
+						<div class="form-middle-inputs">
+							<label for="">Roll No</label> <span>:</span>  
+							<input placeholder="Roll No" name="roll" type="text">
+						</div>
+
+						<div class="form-middle-inputs">
+							<label for="">Regi No</label> <span>:</span> 
+							<input placeholder="Regi No" name="regi" type="text">
+						</div>
+
+						<div class="form-middle-inputs">
+							<label for="">Group</label> <span id="group">:</span>  
+							<input placeholder="Group" name="group" type="text">
+						</div>
+
+						<div class="form-middle-inputs">
+							<label for="">Year</label> <span>:</span>  
+							<input placeholder="Year" name="year" type="text"> 
+						</div>
+
+						
+					</div>
+
+					<!-- Form Last Part -->
+					<div class="title">
+						<h3>Subjects Marks</h3>
+						<hr>
+					</div>
+
+					<div class="result-add-form-last">
+						
+						<div class="form-last-inputs">
+							<label for="">Bangla</label> <span>:</span>  
+							<input placeholder="Marks" name="bangla" type="text">
+						</div>
+
+						<div class="form-last-inputs">
+							<label for="">English</label> <span>:</span> 
+							<input placeholder="Marks" name="en" type="text">
+						</div>
+
+						<div class="form-last-inputs">
+							<label for="">Math</label> <span id="">:</span>  
+							<input placeholder="Marks" name="math" type="text">
+						</div>
+
+						<div class="form-last-inputs">
+							<label for="">Science</label> <span>:</span>  
+							<input placeholder="Marks" name="science" type="text"> 
+						</div>
+
+						<div class="form-last-inputs">
+							<label for="">Religion</label> <span>:</span>  
+							<input placeholder="Marks" name="religion" type="text"> 
+						</div>
+
+						<div class="form-last-inputs">
+							<label for="">Social</label> <span>:</span>  
+							<input placeholder="Marks" name="social" type="text"> 
+						</div>
+						
+					</div>
+					<input class="submit-btn" type="submit" value="Add Result">
+				</div>
+			</form>
+
+			<div class="result-table">
+				<div class="card">
+					<div class="card-header">
+						<div class="table-title">
+							<h2>All Students Result</h2>
+						</div>
+					</div>
+					<div class="card-body">
+						<table class="table-area">
+							<thead>
+								<th>#</th>
+								<th>Name</th>
+								<th>Regi No</th>
+								<th>Institute</th>
+								<th>Photo</th>
+								<th>Action</th>
+							</thead>
+
+							<tbody id="student-result">
+
+
+
+							</tbody>
+							
+						</table>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<!-- Result Show Modal -->
+
+	<div class="result-modal">
+
+		<div class="mark-sheet-modal">
+
+			<div class="result-modal-title">
+				<h2> <span></span>'s Mark Sheet</h2>
+				
+				<div class="close-modal">
+					<div class="close"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="result-stu-info">
+				<div class="left-side-stu-info">
+					<div class="modal-form-inputs">
+						<label for=""> Name</label> <span id="modal-name">:</span> 
+						<h4 class="modal-name"></h4>
+					</div>
+	
+					<div class="modal-form-inputs">
+						<label for=""> Institute</label> <span id="">:</span> 
+						<h4 class="modal-college"></h4>
+					</div>
+	
+					<div class="modal-form-inputs">
+						<label for=""> Group</label> <span id="modal-name">:</span> 
+						<h4 class="modal-group"></h4>
+					</div>
+	
+					<h3></h3>
+	
+				</div>
+	
+				<div class="middle-side-stu-info">
+					
+	
+					<div class="modal-form-inputs">
+						<label for=""> Year</label> <span id="modal-name">:</span> 
+						<h4 class="modal-year"></h4>
+					</div>
+	
+					<div class="modal-form-inputs">
+						<label for=""> Roll No</label> <span id="">:</span> 
+						<h4 class="modal-roll"></h4>
+					</div>
+	
+					<div class="modal-form-inputs">
+						<label for=""> Regi No</label> <span>:</span> 
+						<h4 class="modal-regi"></h4>
+					</div>
+				</div>
+	
+				<div class="right-side-stu-info">
+					<img src="assets/media/img/pp_photo/images.jpg" alt="">
+				</div>
+			</div>
+
+			
+			<div id="marksheet-modal" data-toggle="modal" class="result-modal-area-table">
+				<table class="table-area" id="marksheet-table">
+					
+					<thead>
+						<th>#</th>
+						<th>Subject</th>
+						<th>Marks</th>
+						<th>Point</th>
+						<th>Grade</th>
+						<th>Total Point</th>
+						<th>GPA</th>
+					</thead>
+					<tbody class="result_show">
+						
+						<tr>
+							<td>1</td>
+							<td id="bangla">Bangla</td>
+							<td class="ban_mark"></td>
+							<td class="ban_pont"></td>
+							<td class="ban_grd"></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>2</td>
+							<td id="english">English</td>
+							<td class="en_mark"></td>
+							<td class="en_pont"></td>
+							<td class="en_grd"></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>3</td>
+							<td id="math">Math</td>
+							<td class="mth_mark"></td>
+							<td class="mth_pont"></td>
+							<td class="mth_grd"></td>
+							<td class="final_point"></td>
+							<td class="final_gpa"></td>
+						</tr>
+
+						<tr>
+							<td>4</td>
+							<td id="science">Science</td>							
+							<td class="scin_mark"></td>
+							<td class="scin_pont"></td>
+							<td class="scin_grd"></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>5</td>
+							<td  id="social">Social</td>						
+							<td class="socil_mark"></td>
+							<td class="socil_pont"></td>
+							<td class="socil_grd"></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>6</td>
+							<td id="religion">Religion</td>
+							<td class="relg_mark"></td>
+							<td class="relg_pont"></td>
+							<td class="relg_grd"></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+					</tbody>
+
+					
+				</table>
+			</div>
+
+		</div>
+
+	</div>
+
+	
+	
+
+
+	<!-- JS FILES  -->
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
+	<script src="app/regex.js"></script>
+	<script src="app/validation.js"></script>
+	<script src="assets/js/custom.js"></script> 
+
+</body>
+
+</html>
